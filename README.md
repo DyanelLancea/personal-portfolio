@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal portfolio
 
-## Getting Started
+Next.js version of [dyanel-lancea.vercel.app](https://dyanel-lancea.vercel.app/). The home page and project pages keep the same layout, copy, and routes.
 
-First, run the development server:
+## Run it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Add a project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit only [`content/projects.ts`](content/projects.ts). Put images in `public/assets/images/projects/<name>/`.
 
-## Learn More
+A standard page is one object:
 
-To learn more about Next.js, take a look at the following resources:
+```ts
+{
+  id: 103,
+  group: "personal", // or "school"
+  title: "New Project",
+  category: "Hackathon",
+  date: "Oct 2026",
+  description: "Short text for the home card.",
+  image: "/assets/images/projects/new/cover.png",
+  template: "default",
+  body: "Longer text for the detail page.",
+  tech: ["Next.js"],
+  links: { demo: "https://example.com", github: "https://github.com/example" }
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`group` chooses the carousel. The page is `/project/103`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Leave `body` empty to show “Lancea has not finished adding content here, sorry!”
 
-## Deploy on Vercel
+A custom layout (like EzBiz) is a component in `components/projects/pages/`, registered in `components/projects/ProjectView.tsx`, with `template` set to that name. The card still comes from `content/projects.ts`. Use `pageTitle` when the detail heading should be shorter than the card title.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Intro text and contact links live in [`content/site.ts`](content/site.ts).

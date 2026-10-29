@@ -1,0 +1,35 @@
+.project-detail .empty-content {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+
+}
+
+.project-detail .empty-message {
+
+  font-size: var(--heading-h2);
+  color: #666;
+  font-style: italic;
+
+}
+
+.project-detail h1 {
+
+  font-size: var(--heading-h1);
+
+}
+
+.project-detail .project-description h3 {
+
+  font-size: var(--heading-h3);
+
+}
+
+.project-detail .project-description h4, .project-detail .project-sidebar h4 {
+
+  font-size: var(--heading-h4);
+
+}

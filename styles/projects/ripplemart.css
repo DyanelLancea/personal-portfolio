@@ -1,0 +1,782 @@
+/* Project-specific variables - uses global heading variables from App.vue */
+:root {
+  --fs-list: var(--paragraph-size);
+  --fs-references: clamp(1.0rem, 1.8vw + 0.4rem, 1.5rem);
+  --img-width: clamp(20rem, 80vw, 50rem);
+  --img-height: clamp(10rem, 60vw, 35rem);
+  --video-width: clamp(20rem, 90vw, 60rem);
+  --video-height: clamp(12rem, 50vw, 35rem);
+  --section-pad: clamp(1rem, 2vw, 3rem);
+}
+
+.ripplemart-project .container-fluid.py-5 {
+
+  padding-top: clamp(2rem, 3vw, 4rem) !important;
+  padding-bottom: clamp(3rem, 4vw, 5rem) !important;
+
+}
+
+.ripplemart-project .section-content {
+
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+
+}
+
+.ripplemart-project .section-title {
+
+  font-size: var(--heading-h2);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 1rem;
+
+}
+
+.ripplemart-project .section-title::after {
+
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #0077ED);
+  border-radius: 2px;
+
+}
+
+.ripplemart-project .section-intro {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .intro-text {
+
+  font-size: var(--paragraph-size);
+  text-align: center;
+  color: #86868B;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+
+.ripplemart-project .achievement-badge {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  max-width: 400px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+
+}
+
+.ripplemart-project .badge-icon {
+
+  font-size: 2rem;
+
+}
+
+.ripplemart-project .badge-text {
+
+  font-size: var(--paragraph-size);
+  font-weight: 600;
+  color: #1a1a2e;
+
+}
+
+.ripplemart-project .section-inspiration {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .inspiration-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+.ripplemart-project .inspiration-icon {
+
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+}
+
+.ripplemart-project .inspiration-text {
+
+  font-size: var(--paragraph-size);
+  color: #86868B;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+}
+
+.ripplemart-project .highlight {
+
+  color: #667eea;
+  font-weight: 600;
+
+}
+
+.ripplemart-project .section-features {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .features-intro {
+
+  font-size: var(--paragraph-size);
+  text-align: center;
+  color: #86868B;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.ripplemart-project .features-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.ripplemart-project .feature-card {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+
+}
+
+.ripplemart-project .feature-card:hover {
+
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.3);
+
+}
+
+.ripplemart-project .feature-icon {
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+.ripplemart-project .feature-title {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+
+}
+
+.ripplemart-project .feature-description {
+
+  font-size: var(--paragraph-size);
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+
+}
+
+.ripplemart-project .feature-description code {
+
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #667eea;
+  font-family: 'Courier New', monospace;
+
+}
+
+.ripplemart-project .section-build {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .build-intro {
+
+  font-size: var(--paragraph-size);
+  text-align: center;
+  color: #86868B;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.ripplemart-project .build-items {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.ripplemart-project .build-item {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+}
+
+.ripplemart-project .build-item:hover {
+
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.15);
+
+}
+
+.ripplemart-project .build-icon {
+
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
+}
+
+.ripplemart-project .build-content h4 {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+
+}
+
+.ripplemart-project .build-content p {
+
+  font-size: var(--paragraph-size);
+  color: #86868B;
+  line-height: 1.7;
+  text-align: center;
+
+}
+
+.ripplemart-project .build-content strong {
+
+  color: #667eea;
+
+}
+
+.ripplemart-project .section-challenges {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .challenge-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+.ripplemart-project .challenge-header {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+}
+
+.ripplemart-project .challenge-icon {
+
+  font-size: 2.5rem;
+
+}
+
+.ripplemart-project .challenge-header h3 {
+
+  font-size: var(--heading-h3);
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+
+}
+
+.ripplemart-project .challenge-card > p {
+
+  font-size: var(--paragraph-size);
+  color: #86868B;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-align: center;
+
+}
+
+.ripplemart-project .solution-box {
+
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 1.5rem;
+
+}
+
+.ripplemart-project .solution-box h4 {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-weight: 600;
+
+}
+
+.ripplemart-project .solution-box ol {
+
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #86868B;
+
+}
+
+.ripplemart-project .solution-box li {
+
+  font-size: var(--paragraph-size);
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  text-align: left;
+
+}
+
+.ripplemart-project .solution-box strong {
+
+  color: #667eea;
+
+}
+
+.ripplemart-project .section-accomplishments {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .accomplishments-list {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+}
+
+.ripplemart-project .accomplishment-item {
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+}
+
+.ripplemart-project .accomplishment-item:hover {
+
+  transform: translateX(5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+
+}
+
+.ripplemart-project .accomplishment-badge {
+
+  font-size: 2rem;
+  flex-shrink: 0;
+
+}
+
+.ripplemart-project .accomplishment-content h4 {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+
+}
+
+.ripplemart-project .accomplishment-content p {
+
+  font-size: var(--paragraph-size);
+  color: #86868B;
+  line-height: 1.7;
+  margin: 0;
+
+}
+
+.ripplemart-project .accomplishment-content code {
+
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #667eea;
+  font-family: 'Courier New', monospace;
+
+}
+
+.ripplemart-project .accomplishment-content strong {
+
+  color: #667eea;
+
+}
+
+.ripplemart-project .section-learned {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .learned-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.ripplemart-project .learned-icon {
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+.ripplemart-project .learned-text {
+
+  font-size: var(--paragraph-size);
+  color: #86868B;
+  line-height: 1.8;
+  margin: 0;
+
+}
+
+.ripplemart-project .learned-text code {
+
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #667eea;
+  font-family: 'Courier New', monospace;
+
+}
+
+.ripplemart-project .section-future {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .future-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.ripplemart-project .future-icon {
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+.ripplemart-project .future-text {
+
+  font-size: var(--paragraph-size);
+  color: #86868B;
+  line-height: 1.8;
+  margin: 0;
+
+}
+
+.ripplemart-project .section-technologies {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .tech-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.ripplemart-project .tech-category {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.ripplemart-project .tech-category-title {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+
+}
+
+.ripplemart-project .tech-badges {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+
+}
+
+.ripplemart-project .tech-badge {
+
+  background: linear-gradient(135deg, #667eea, #0077ED);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.2);
+
+}
+
+.ripplemart-project .tech-badge:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+
+}
+
+.ripplemart-project .section-acknowledgements {
+
+  margin-bottom: 4rem;
+  scroll-margin-top: 100px;
+
+}
+
+.ripplemart-project .acknowledgements-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+
+}
+
+.ripplemart-project .acknowledgements-card p {
+
+  font-size: var(--paragraph-size);
+  color: #86868B;
+  line-height: 1.8;
+  margin: 0;
+  text-align: center;
+
+}
+
+.ripplemart-project .decorated-link {
+
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+.ripplemart-project .decorated-link:hover {
+
+  color: #0077ED;
+  text-decoration: underline;
+
+}
+
+.ripplemart-project .section-screenshots {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .images-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+}
+
+.ripplemart-project .image-card {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+}
+
+.ripplemart-project .image-title {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+
+}
+
+.ripplemart-project .section-links {
+
+  margin-bottom: 4rem;
+
+}
+
+.ripplemart-project .links-card {
+
+  text-align: center;
+  padding: 2rem;
+
+}
+
+.ripplemart-project .project-link {
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #667eea, #0077ED);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: var(--paragraph-size);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+}
+
+.ripplemart-project .project-link:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+  color: white;
+  text-decoration: none;
+
+}
+
+.ripplemart-project .project-link i {
+
+  font-size: 1.1rem;
+
+}
+
+@media screen and (max-width: 768px) {
+.ripplemart-project .features-grid, .ripplemart-project .build-items, .ripplemart-project .tech-grid, .ripplemart-project .images-grid {
+
+    grid-template-columns: 1fr;
+  
+}
+
+.ripplemart-project .accomplishment-item {
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+}
+
+.ripplemart-project .accomplishment-content h4 {
+
+    text-align: center;
+  
+}
+}
+
+@media screen and (max-width: 480px) {
+.ripplemart-project .section-content {
+
+    padding: 0 1rem;
+  
+}
+
+.ripplemart-project .inspiration-card, .ripplemart-project .challenge-card, .ripplemart-project .learned-card, .ripplemart-project .future-card, .ripplemart-project .acknowledgements-card, .ripplemart-project .image-card {
+
+    padding: 1.5rem;
+  
+}
+
+.ripplemart-project .achievement-badge {
+
+    flex-direction: column;
+    padding: 1rem;
+  
+}
+}

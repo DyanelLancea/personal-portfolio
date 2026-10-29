@@ -1,0 +1,735 @@
+/* Project-specific variables - uses global heading variables from App.vue */
+:root {
+  --fs-list: var(--paragraph-size);
+  --fs-references: clamp(1.0rem, 1.8vw + 0.4rem, 1.5rem);
+  --img-width: clamp(20rem, 80vw, 50rem);
+  --img-height: clamp(10rem, 60vw, 35rem);
+  --video-width: clamp(20rem, 90vw, 60rem);
+  --video-height: clamp(12rem, 50vw, 35rem);
+  --section-pad: clamp(1rem, 2vw, 3rem);
+}
+
+.silvercompanion-project .container-fluid.py-5 {
+
+  padding-top: clamp(2rem, 3vw, 4rem) !important;
+  padding-bottom: clamp(3rem, 4vw, 5rem) !important;
+
+}
+
+.silvercompanion-project .section-content {
+
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+
+}
+
+.silvercompanion-project .section-title {
+
+  font-size: var(--heading-h2);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 1rem;
+
+}
+
+.silvercompanion-project .section-title::after {
+
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+
+}
+
+.silvercompanion-project .section-intro {
+
+  margin-bottom: 4rem;
+
+}
+
+.silvercompanion-project .intro-text {
+
+  font-size: var(--paragraph-size);
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+
+.silvercompanion-project .video-container {
+
+  max-width: var(--video-width);
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  padding-bottom: 0 !important;
+  position: relative !important;
+  margin: 2rem auto;
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.silvercompanion-project .video-container:hover {
+
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+}
+
+.silvercompanion-project .video-container iframe {
+
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.silvercompanion-project .achievement-badge {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  max-width: 400px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+
+}
+
+.silvercompanion-project .badge-icon {
+
+  font-size: 2rem;
+
+}
+
+.silvercompanion-project .badge-text {
+
+  font-size: var(--paragraph-size);
+  font-weight: 600;
+  color: #2c3e50;
+
+}
+
+.silvercompanion-project .section-about {
+
+  margin-bottom: 4rem;
+
+}
+
+.silvercompanion-project .about-text {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+
+.silvercompanion-project .highlight {
+
+  color: #667eea;
+  font-weight: 600;
+
+}
+
+.silvercompanion-project .section-workflow {
+
+  margin-bottom: 4rem;
+
+}
+
+.silvercompanion-project .workflow-intro {
+
+  font-size: var(--paragraph-size);
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.silvercompanion-project .system-image-container {
+
+  margin: 2rem auto 3rem;
+  text-align: center;
+  max-width: 1000px;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.silvercompanion-project .system-image-container .project-img {
+
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.silvercompanion-project .system-image-container .project-img:hover {
+
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+}
+
+.silvercompanion-project .system-image-container .image-caption {
+
+  font-size: calc(var(--paragraph-size) * 0.9);
+  color: #777;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+
+}
+
+.silvercompanion-project .agents-container {
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+}
+
+.silvercompanion-project .agent-card {
+
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid #667eea;
+
+}
+
+.silvercompanion-project .agent-card:hover {
+
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.25);
+
+}
+
+.silvercompanion-project .agent-number {
+
+  position: absolute;
+  top: -15px;
+  left: 2rem;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+}
+
+.silvercompanion-project .agent-content {
+
+  margin-top: 1rem;
+
+}
+
+.silvercompanion-project .agent-icon {
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+
+}
+
+.silvercompanion-project .agent-title {
+
+  font-size: var(--heading-h3);
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+
+}
+
+.silvercompanion-project .agent-subtitle {
+
+  font-size: var(--paragraph-size);
+  color: #667eea;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+
+}
+
+.silvercompanion-project .agent-description {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.7;
+  text-align: center;
+
+}
+
+.silvercompanion-project .section-features {
+
+  margin-bottom: 4rem;
+
+}
+
+.silvercompanion-project .features-list {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+.silvercompanion-project .feature-item {
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+}
+
+.silvercompanion-project .feature-item:hover {
+
+  transform: translateX(5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+
+}
+
+.silvercompanion-project .feature-badge {
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+
+}
+
+.silvercompanion-project .feature-item p {
+
+  margin: 0;
+  font-size: var(--paragraph-size);
+  color: #555;
+  flex: 1;
+
+}
+
+.silvercompanion-project .section-technologies {
+
+  margin-bottom: 4rem;
+
+}
+
+.silvercompanion-project .tech-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+}
+
+.silvercompanion-project .tech-category {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.silvercompanion-project .tech-category-title {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+
+}
+
+.silvercompanion-project .tech-badges {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+
+}
+
+.silvercompanion-project .tech-badge {
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.2);
+
+}
+
+.silvercompanion-project .tech-badge:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+
+}
+
+.silvercompanion-project .section-roadmap {
+
+  margin-bottom: 4rem;
+
+}
+
+.silvercompanion-project .roadmap-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+.silvercompanion-project .roadmap-intro {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+
+}
+
+.silvercompanion-project .roadmap-items {
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+.silvercompanion-project .roadmap-item {
+
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+
+}
+
+.silvercompanion-project .roadmap-icon {
+
+  font-size: 2.5rem;
+  flex-shrink: 0;
+
+}
+
+.silvercompanion-project .roadmap-content h4 {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+
+}
+
+.silvercompanion-project .roadmap-content p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+
+}
+
+.silvercompanion-project .section-takeaway {
+
+  margin-bottom: 4rem;
+
+}
+
+.silvercompanion-project .takeaway-card {
+
+  background: linear-gradient(135deg, #fff5e1 0%, #ffeaa7 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(255, 234, 167, 0.3);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid rgba(255, 193, 7, 0.3);
+
+}
+
+.silvercompanion-project .takeaway-icon {
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+.silvercompanion-project .takeaway-text {
+
+  font-size: var(--paragraph-size);
+  color: #2c3e50;
+  line-height: 1.8;
+  margin: 0;
+  font-style: italic;
+
+}
+
+.silvercompanion-project .takeaway-text strong {
+
+  color: #d68910;
+
+}
+
+.silvercompanion-project .section-acknowledgements {
+
+  margin-bottom: 4rem;
+  scroll-margin-top: 100px;
+
+}
+
+.silvercompanion-project .acknowledgements-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.silvercompanion-project .acknowledgements-card p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+  text-align: center;
+
+}
+
+.silvercompanion-project .acknowledgement-image-container {
+
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
+
+}
+
+.silvercompanion-project .acknowledgement-img {
+
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+}
+
+.silvercompanion-project .acknowledgement-img:hover {
+
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+}
+
+.silvercompanion-project .image-caption {
+
+  font-size: calc(var(--paragraph-size) * 0.9);
+  color: #777;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+
+}
+
+.silvercompanion-project .decorated-link {
+
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+
+}
+
+.silvercompanion-project .decorated-link:hover {
+
+  color: #764ba2;
+  text-decoration: underline;
+
+}
+
+.silvercompanion-project .section-links {
+
+  margin-bottom: 4rem;
+
+}
+
+.silvercompanion-project .links-card {
+
+  text-align: center;
+  padding: 2rem;
+
+}
+
+.silvercompanion-project .project-link {
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: var(--paragraph-size);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+}
+
+.silvercompanion-project .project-link:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+  color: white;
+  text-decoration: none;
+
+}
+
+.silvercompanion-project .project-link i {
+
+  font-size: 1.1rem;
+
+}
+
+@media screen and (max-width: 768px) {
+.silvercompanion-project .agents-container {
+
+    gap: 1.5rem;
+  
+}
+
+.silvercompanion-project .agent-card {
+
+    padding: 1.5rem;
+  
+}
+
+.silvercompanion-project .roadmap-item {
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+}
+
+.silvercompanion-project .roadmap-icon {
+
+    font-size: 2rem;
+  
+}
+
+.silvercompanion-project .tech-grid {
+
+    grid-template-columns: 1fr;
+  
+}
+}
+
+@media screen and (max-width: 480px) {
+.silvercompanion-project .section-content {
+
+    padding: 0 1rem;
+  
+}
+
+.silvercompanion-project .agent-card {
+
+    padding: 1rem;
+  
+}
+
+.silvercompanion-project .takeaway-card, .silvercompanion-project .roadmap-card, .silvercompanion-project .acknowledgements-card {
+
+    padding: 1.5rem;
+  
+}
+
+.silvercompanion-project .achievement-badge {
+
+    flex-direction: column;
+    padding: 1rem;
+  
+}
+}

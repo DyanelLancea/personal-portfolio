@@ -1,0 +1,709 @@
+/* Project-specific variables - uses global heading variables from App.vue */
+:root {
+  /* Use global heading variables (defined in App.vue) */
+  /* --heading-h1, --heading-h2, --heading-h3, --heading-h4 are available globally */
+  
+  /* Project-specific content sizes - uses global --paragraph-size from App.vue */
+  /* --fs-paragraph and --fs-list are mapped to --paragraph-size in App.vue */
+  --fs-list: var(--paragraph-size); /* List items - same as paragraphs */
+  --fs-references: clamp(1.0rem, 1.8vw + 0.4rem, 1.5rem); /* References list items */
+
+  /* Image sizes - scale with screen size */
+  --img-width: clamp(20rem, 80vw, 50rem);
+  --img-height: clamp(10rem, 60vw, 35rem);
+  
+  /* Video container - scale with screen size */
+  --video-width: clamp(20rem, 90vw, 60rem);
+  --video-height: clamp(12rem, 50vw, 35rem);
+
+  /* Section padding - scale with screen size */
+  --section-pad: clamp(1rem, 2vw, 3rem);
+
+  /* Acknowledgement images - side by side container */
+  --ack-img-container-width: clamp(30rem, 90vw, 80rem);
+  --ack-img-max-width: clamp(15rem, 40vw, 35rem);
+
+  /* Prototype images - side by side container */
+  --proto-img-container-width: clamp(30rem, 90vw, 80rem);
+  --proto-img-max-width: clamp(15rem, 40vw, 35rem);
+}
+
+.drone-project .container-fluid.py-5 {
+
+  padding-top: clamp(2rem, 3vw, 4rem) !important;
+  padding-bottom: clamp(3rem, 4vw, 5rem) !important;
+
+}
+
+.drone-project .section-content {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+
+}
+
+.drone-project .section-title {
+
+  font-size: var(--heading-h2);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #1D1D1F;
+  position: relative;
+  padding-bottom: 1rem;
+
+}
+
+.drone-project .section-title::after {
+
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #0071E3;
+  border-radius: 2px;
+
+}
+
+.drone-project .section-intro {
+
+  margin-bottom: 4rem;
+
+}
+
+.drone-project .intro-text {
+
+  font-size: var(--paragraph-size);
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+
+}
+
+.drone-project .video-container {
+
+  max-width: var(--video-width);
+  height: var(--video-height);
+  margin: 2rem auto;
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.drone-project .video-container:hover {
+
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+}
+
+.drone-project .video-container iframe {
+
+  width: 100%;
+  height: 100%;
+  border: none;
+
+}
+
+.drone-project .section-about {
+
+  margin-bottom: 4rem;
+
+}
+
+.drone-project .about-text {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.drone-project .highlight {
+
+  color: #0071E3;
+  font-weight: 600;
+
+}
+
+.drone-project .features-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+
+}
+
+.drone-project .feature-card {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+
+}
+
+.drone-project .feature-card:hover {
+
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.3);
+
+}
+
+.drone-project .feature-icon {
+
+  font-size: 3rem;
+  margin-bottom: 1rem;
+
+}
+
+.drone-project .feature-card h4 {
+
+  font-size: var(--heading-h4);
+  color: #1D1D1F;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+
+}
+
+.drone-project .feature-card p {
+
+  font-size: var(--paragraph-size);
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+
+}
+
+.drone-project .section-tech {
+
+  margin-bottom: 4rem;
+
+}
+
+.drone-project .tech-intro {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+
+}
+
+.drone-project .tech-intro p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+
+}
+
+.drone-project .workflow-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+
+}
+
+.drone-project .workflow-title {
+
+  font-size: var(--heading-h3);
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1D1D1F;
+
+}
+
+.drone-project .workflow-steps {
+
+  display: grid;
+  gap: 1.5rem;
+
+}
+
+.drone-project .workflow-step {
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+}
+
+.drone-project .workflow-step:hover {
+
+  background: #e9ecef;
+  transform: translateX(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+.drone-project .step-number {
+
+  background: #0071E3;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+
+}
+
+.drone-project .step-content h4 {
+
+  margin: 0 0 0.5rem 0;
+  color: #1D1D1F;
+  font-size: var(--heading-h4);
+
+}
+
+.drone-project .step-content p {
+
+  margin: 0;
+  color: #555;
+  font-size: var(--paragraph-size);
+  text-align: left;
+
+}
+
+.drone-project .images-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+}
+
+.drone-project .image-card {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+}
+
+.drone-project .image-title {
+
+  font-size: var(--heading-h4);
+  color: #1D1D1F;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+
+}
+
+.drone-project .project-img {
+
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.drone-project .project-img:hover {
+
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+.drone-project .dashboard-card {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.drone-project .dashboard-title {
+
+  font-size: var(--heading-h4);
+  color: #1D1D1F;
+  margin-bottom: 1rem;
+
+}
+
+.drone-project .dashboard-card p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+
+}
+
+.drone-project .decorated-link {
+
+  color: #0071E3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+.drone-project .decorated-link:hover {
+
+  color: #764ba2;
+  text-decoration: underline;
+
+}
+
+.drone-project .section-prototype {
+
+  margin-bottom: 4rem;
+
+}
+
+.drone-project .prototype-intro {
+
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  text-align: center;
+
+}
+
+.drone-project .prototype-intro p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  margin: 0;
+
+}
+
+.drone-project .prototype-images {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+}
+
+.drone-project .prototype-image-card {
+
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+}
+
+.drone-project .prototype-image-card .project-img {
+
+  width: 100%;
+  height: auto;
+
+}
+
+.drone-project .section-components {
+
+  margin-bottom: 4rem;
+
+}
+
+.drone-project .tech-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+}
+
+.drone-project .tech-category {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.drone-project .tech-category-title {
+
+  font-size: var(--heading-h4);
+  color: #1D1D1F;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+
+}
+
+.drone-project .tech-badges {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+
+}
+
+.drone-project .tech-badge {
+
+  background: #0071E3;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.2);
+
+}
+
+.drone-project .tech-badge:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+
+}
+
+.drone-project .section-acknowledgements {
+
+  margin-bottom: 4rem;
+
+}
+
+.drone-project .acknowledgements-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+
+}
+
+.drone-project .acknowledgements-card p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+  text-align: center;
+
+}
+
+.drone-project .batman-icon {
+
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  display: inline-block;
+
+}
+
+.drone-project .acknowledgement-images {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+}
+
+.drone-project .ack-image-card {
+
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+}
+
+.drone-project .project-img-no-modal {
+
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+
+}
+
+.drone-project .section-references {
+
+  margin-bottom: 2rem;
+
+}
+
+.drone-project .references-card {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.drone-project .reference-item {
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+}
+
+.drone-project .reference-item:hover {
+
+  background: #e9ecef;
+  transform: translateX(5px);
+
+}
+
+.drone-project .reference-item:last-child {
+
+  margin-bottom: 0;
+
+}
+
+.drone-project .reference-label {
+
+  font-weight: 600;
+  color: #1D1D1F;
+  min-width: 120px;
+  font-size: var(--paragraph-size);
+
+}
+
+.drone-project .reference-link {
+
+  color: #0071E3;
+  text-decoration: none;
+  font-size: var(--paragraph-size);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+
+}
+
+.drone-project .reference-link:hover {
+
+  color: #764ba2;
+  text-decoration: underline;
+
+}
+
+.drone-project .reference-link i {
+
+  font-size: 0.8rem;
+
+}
+
+@media screen and (max-width: 768px) {
+.drone-project .features-grid {
+
+    grid-template-columns: 1fr;
+  
+}
+
+.drone-project .images-grid {
+
+    grid-template-columns: 1fr;
+  
+}
+
+.drone-project .tech-grid {
+
+    grid-template-columns: 1fr;
+  
+}
+
+.drone-project .workflow-steps {
+
+    gap: 1rem;
+  
+}
+
+.drone-project .prototype-images {
+
+    grid-template-columns: 1fr;
+  
+}
+
+.drone-project .acknowledgement-images {
+
+    grid-template-columns: 1fr;
+  
+}
+
+.drone-project .reference-item {
+
+    flex-direction: column;
+    align-items: flex-start;
+  
+}
+
+.drone-project .reference-label {
+
+    min-width: auto;
+  
+}
+}
+
+@media screen and (max-width: 480px) {
+.drone-project .section-content {
+
+    padding: 0 1rem;
+  
+}
+
+.drone-project .workflow-card {
+
+    padding: 1.5rem;
+  
+}
+
+.drone-project .feature-card, .drone-project .tech-category, .drone-project .image-card {
+
+    padding: 1.5rem;
+  
+}
+}

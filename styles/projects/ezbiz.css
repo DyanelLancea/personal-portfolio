@@ -1,0 +1,597 @@
+/* Project-specific variables - uses global heading variables from App.vue */
+:root {
+  --fs-list: var(--paragraph-size);
+  --fs-references: clamp(1.0rem, 1.8vw + 0.4rem, 1.5rem);
+  --img-width: clamp(20rem, 80vw, 50rem);
+  --img-height: clamp(10rem, 60vw, 35rem);
+  --video-width: clamp(20rem, 90vw, 60rem);
+  --video-height: clamp(12rem, 50vw, 35rem);
+  --section-pad: clamp(1rem, 2vw, 3rem);
+}
+
+.ezbiz-project .container-fluid.py-5 {
+
+  padding-top: clamp(2rem, 3vw, 4rem) !important;
+  padding-bottom: clamp(3rem, 4vw, 5rem) !important;
+
+}
+
+.ezbiz-project .section-content {
+
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+
+}
+
+.ezbiz-project .section-title {
+
+  font-size: var(--heading-h2);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 1rem;
+
+}
+
+.ezbiz-project .section-title::after {
+
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+
+}
+
+.ezbiz-project .section-intro {
+
+  margin-bottom: 4rem;
+
+}
+
+.ezbiz-project .intro-text {
+
+  font-size: var(--paragraph-size);
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+
+.ezbiz-project .video-container {
+
+  max-width: var(--video-width);
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  padding-bottom: 0 !important;
+  position: relative !important;
+  margin: 2rem auto;
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.ezbiz-project .video-container:hover {
+
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+}
+
+.ezbiz-project .video-container iframe {
+
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.ezbiz-project .section-about {
+
+  margin-bottom: 4rem;
+
+}
+
+.ezbiz-project .about-text {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+
+.ezbiz-project .highlight {
+
+  color: #667eea;
+  font-weight: 600;
+
+}
+
+.ezbiz-project .phases-container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+
+}
+
+.ezbiz-project .phase-item {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 280px;
+
+}
+
+.ezbiz-project .phase-number {
+
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+}
+
+.ezbiz-project .phase-content {
+
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(102, 126, 234, 0.15);
+  width: 100%;
+  margin-top: 10px;
+
+}
+
+.ezbiz-project .phase-item:hover .phase-content {
+
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.25);
+  border-color: rgba(102, 126, 234, 0.4);
+
+}
+
+.ezbiz-project .phase-item:hover .phase-number {
+
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+
+}
+
+.ezbiz-project .phase-icon {
+
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+
+}
+
+.ezbiz-project .phase-title {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+}
+
+.ezbiz-project .phase-connector {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 60px;
+  position: relative;
+  margin: 0 0.5rem;
+
+}
+
+.ezbiz-project .connector-line {
+
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+  border-radius: 2px;
+  margin-bottom: 5px;
+
+}
+
+.ezbiz-project .connector-arrow {
+
+  font-size: 1.5rem;
+  color: #667eea;
+  font-weight: bold;
+
+}
+
+@media screen and (max-width: 768px) {
+.ezbiz-project .phases-container {
+
+    flex-direction: column;
+    gap: 2rem;
+  
+}
+
+.ezbiz-project .phase-connector {
+
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  
+}
+
+.ezbiz-project .connector-line {
+
+    width: 50px;
+    height: 3px;
+  
+}
+}
+
+.ezbiz-project .section-tech {
+
+  margin-bottom: 4rem;
+
+}
+
+.ezbiz-project .tech-intro {
+
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 2rem;
+
+}
+
+.ezbiz-project .tech-intro p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.ezbiz-project .system-image-container {
+
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.ezbiz-project .system-image-container .project-img {
+
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.ezbiz-project .system-image-container .project-img:hover {
+
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+}
+
+.ezbiz-project .section-features {
+
+  margin-bottom: 4rem;
+
+}
+
+.ezbiz-project .features-list {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.ezbiz-project .feature-item {
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+}
+
+.ezbiz-project .feature-item:hover {
+
+  transform: translateX(5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+
+}
+
+.ezbiz-project .feature-badge {
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+
+}
+
+.ezbiz-project .feature-item p {
+
+  margin: 0;
+  font-size: var(--paragraph-size);
+  color: #555;
+  flex: 1;
+
+}
+
+.ezbiz-project .section-technologies {
+
+  margin-bottom: 4rem;
+
+}
+
+.ezbiz-project .tech-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+}
+
+.ezbiz-project .tech-category {
+
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.ezbiz-project .tech-category-title {
+
+  font-size: var(--heading-h4);
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+
+}
+
+.ezbiz-project .tech-badges {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+
+}
+
+.ezbiz-project .tech-badge {
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.2);
+
+}
+
+.ezbiz-project .tech-badge:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+
+}
+
+.ezbiz-project .section-documentation {
+
+  margin-bottom: 4rem;
+
+}
+
+.ezbiz-project .documentation-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+}
+
+.ezbiz-project .documentation-card p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  margin-bottom: 1.5rem;
+
+}
+
+.ezbiz-project .document-link {
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: var(--paragraph-size);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+}
+
+.ezbiz-project .document-link:hover {
+
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+
+}
+
+.ezbiz-project .document-link i {
+
+  font-size: 1.2rem;
+
+}
+
+.ezbiz-project .section-acknowledgements {
+
+  margin-bottom: 4rem;
+  scroll-margin-top: 100px; /* Account for sticky navbar */
+
+}
+
+.ezbiz-project .acknowledgements-card {
+
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.ezbiz-project .acknowledgements-card p {
+
+  font-size: var(--paragraph-size);
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+  text-align: center;
+
+}
+
+.ezbiz-project .decorated-link {
+
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+}
+
+.ezbiz-project .decorated-link:hover {
+
+  color: #764ba2;
+  text-decoration: underline;
+
+}
+
+@media screen and (max-width: 768px) {
+.ezbiz-project .features-grid {
+
+    grid-template-columns: 1fr;
+  
+}
+
+.ezbiz-project .tech-grid {
+
+    grid-template-columns: 1fr;
+  
+}
+
+.ezbiz-project .workflow-steps {
+
+    gap: 1rem;
+  
+}
+}
+
+@media screen and (max-width: 480px) {
+.ezbiz-project .section-content {
+
+    padding: 0 1rem;
+  
+}
+
+.ezbiz-project .workflow-card {
+
+    padding: 1.5rem;
+  
+}
+
+.ezbiz-project .feature-card, .ezbiz-project .tech-category {
+
+    padding: 1.5rem;
+  
+}
+}
