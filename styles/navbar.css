@@ -20,45 +20,13 @@
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  #Navbar:not(.games-navbar) {
+  #Navbar {
     background: #FFFFFF !important;
   }
 }
 
-/* Games page - non-sticky */
-#Navbar.games-navbar {
-  position: relative;
-}
-
-#Navbar:hover:not(.games-navbar) {
+#Navbar:hover {
   background: rgba(255, 255, 255, 0.95) !important;
-}
-
-/* Dark theme for games page */
-#Navbar.games-navbar {
-  background: linear-gradient(135deg, rgba(30, 30, 50, 0.9) 0%, rgba(26, 26, 46, 0.85) 100%) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(102, 126, 234, 0.3) inset,
-    0 0 40px rgba(102, 126, 234, 0.15),
-    0 2px 4px rgba(0, 0, 0, 0.2) inset !important;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.4) !important;
-  position: relative !important;
-}
-
-#Navbar.games-navbar::before {
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
-}
-
-#Navbar.games-navbar:hover {
-  background: linear-gradient(135deg, rgba(30, 30, 50, 0.95) 0%, rgba(26, 26, 46, 0.9) 100%) !important;
-  box-shadow: 
-    0 12px 48px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(102, 126, 234, 0.5) inset,
-    0 0 60px rgba(102, 126, 234, 0.25),
-    0 4px 8px rgba(0, 0, 0, 0.3) inset !important;
 }
 
 /* Home page navbar brand styling - Apple typography */
@@ -76,27 +44,6 @@
 
 #Navbar .navbar-brand:hover {
   color: #0071E3;
-}
-
-/* Games page navbar brand styling */
-#Navbar.games-navbar .navbar-brand {
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
-}
-
-#Navbar.games-navbar .navbar-brand::before {
-  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
-  background-size: 200% 100%;
-  height: 3px;
-}
-
-#Navbar.games-navbar .navbar-brand::after {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.1));
-}
-
-#Navbar.games-navbar .navbar-brand:hover {
-  color: rgba(255, 255, 255, 1);
-  text-shadow: 0 0 15px rgba(102, 126, 234, 0.6);
 }
 
 /* Home page nav link styling - Apple Blue accent */
@@ -121,41 +68,6 @@
   color: #0071E3;
 }
 
-/* Games page nav link styling */
-#Navbar.games-navbar .nav-link {
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 0 8px rgba(102, 126, 234, 0.2);
-}
-
-#Navbar.games-navbar .nav-link::before {
-  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
-  background-size: 200% 100%;
-  height: 3px;
-}
-
-#Navbar.games-navbar .nav-link::after {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.25), rgba(118, 75, 162, 0.15));
-}
-
-#Navbar.games-navbar .nav-link:hover {
-  color: rgba(255, 255, 255, 1);
-  text-shadow: 0 0 15px rgba(102, 126, 234, 0.6);
-  box-shadow: 
-    0 6px 24px rgba(102, 126, 234, 0.3),
-    0 0 0 1px rgba(102, 126, 234, 0.25) inset;
-}
-
-#Navbar.games-navbar .nav-link.active {
-  color: rgba(255, 255, 255, 1);
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.35), rgba(118, 75, 162, 0.25));
-  border-color: rgba(102, 126, 234, 0.5);
-  box-shadow: 
-    0 8px 32px rgba(102, 126, 234, 0.4),
-    0 0 0 1px rgba(102, 126, 234, 0.4) inset,
-    0 0 30px rgba(102, 126, 234, 0.3);
-  text-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
-}
-
 #Navbar .navbar {
   margin-bottom: 0;
 }
@@ -173,62 +85,6 @@
 #Navbar .nav-item {
   flex-shrink: 0;
   white-space: nowrap;
-}
-
-/* Games page user info */
-.games-user-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-shrink: 0;
-}
-
-.games-user-info .welcome-text {
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-
-.games-user-info .logout-btn {
-  padding: 8px 20px;
-  background: linear-gradient(90deg, #ff4444 0%, #ff8800 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  box-shadow: 
-    0 0 15px rgba(255, 68, 68, 0.4),
-    0 0 25px rgba(255, 136, 0, 0.3),
-    0 2px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.games-user-info .logout-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.games-user-info .logout-btn:hover {
-  background: linear-gradient(90deg, #ff5555 0%, #ff9900 100%);
-  box-shadow: 
-    0 0 20px rgba(255, 68, 68, 0.6),
-    0 0 35px rgba(255, 136, 0, 0.4),
-    0 4px 12px rgba(0, 0, 0, 0.3);
-  transform: translateY(-1px);
-}
-
-.games-user-info .logout-btn:hover::before {
-  left: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -266,35 +122,6 @@
     min-width: fit-content;
   }
   
-  /* Games page specific mobile styles */
-  #Navbar.games-navbar {
-    padding: 8px 10px;
-    justify-content: space-between;
-  }
-  
-  .games-user-info {
-    flex-direction: row;
-    gap: 0.75rem;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-left: auto;
-    flex-shrink: 0;
-  }
-  
-  .games-user-info .welcome-text {
-    font-size: 0.8rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 120px;
-  }
-  
-  .games-user-info .logout-btn {
-    padding: 6px 14px;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -334,31 +161,6 @@
     min-width: fit-content;
   }
   
-  #Navbar.games-navbar {
-    padding: 6px 8px;
-  }
-  
-  #Navbar.games-navbar .navbar-brand {
-    font-size: 0.7rem;
-    padding: 4px 6px;
-  }
-  
-  .games-user-info {
-    gap: 0.5rem;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  
-  .games-user-info .welcome-text {
-    font-size: 0.7rem;
-    max-width: 90px;
-  }
-  
-  .games-user-info .logout-btn {
-    padding: 5px 10px;
-    font-size: 0.7rem;
-  }
 }
 
 @media screen and (max-width: 360px) {
@@ -369,10 +171,6 @@
     overflow: hidden;
   }
   
-  #Navbar.games-navbar {
-    padding: 6px 6px;
-  }
-  
   #Navbar .navbar-brand {
     font-size: 0.65rem;
     padding: 4px 6px;
@@ -381,11 +179,6 @@
     max-width: 35%;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
-  #Navbar.games-navbar .navbar-brand {
-    font-size: 0.65rem;
-    padding: 4px 6px;
   }
   
   #Navbar .nav {
@@ -406,13 +199,4 @@
     min-width: fit-content;
   }
   
-  .games-user-info .welcome-text {
-    font-size: 0.65rem;
-    max-width: 80px;
-  }
-  
-  .games-user-info .logout-btn {
-    padding: 4px 8px;
-    font-size: 0.65rem;
-  }
 }

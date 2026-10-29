@@ -3,7 +3,7 @@ export const site = {
   description: "Portfolio website showcasing projects",
   introHeading: "My name is Lancea!",
   intro:
-    "You are looking at my personal website that I personally designed and coded to showcase my current projects. This portfolio is not finished and will be updated regularly as I complete more projects. This website uses Vue.js, Supabase, and then hosted on Vercel.",
+    "You are looking at my personal website that I personally designed and coded to showcase my current projects. This portfolio is not finished and will be updated regularly as I complete more projects. This website uses Next.js and is hosted on Vercel.",
   resumeHref: "/assets/documents/Official-Resume.pdf",
   resumeLabel: "Take a look at my Resume",
   portrait: "/assets/images/personal/pic01.jpg",
