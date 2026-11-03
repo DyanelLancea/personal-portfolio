@@ -120,7 +120,12 @@ export default function HomePage() {
               </h2>
             </header>
             <p>{site.intro}</p>
-            <a className="resume-button" href={site.resumeHref}>
+            <a
+              className="resume-button"
+              href={site.resumeHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {site.resumeLabel}
             </a>
           </div>

@@ -4,7 +4,8 @@ export const site = {
   introHeading: "My name is Lancea!",
   intro:
     "You are looking at my personal website that I personally designed and coded to showcase my current projects. This portfolio is not finished and will be updated regularly as I complete more projects. This website uses Next.js and is hosted on Vercel.",
-  resumeHref: "/assets/documents/Official-Resume.pdf",
+  resumeHref:
+    "https://drive.google.com/file/d/1OOrDfCy_z0ao_FIey9oKKuxpnQA0576q/view?usp=drive_link",
   resumeLabel: "Take a look at my Resume",
   portrait: "/assets/images/personal/pic01.jpg",
   hammy: "/assets/images/personal/hammy.png",
